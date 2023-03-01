@@ -380,6 +380,8 @@ extension ViewController: HeaderViewDelegate {
     func headerView(_ headerView: HeaderView, heightDidChangeTo newHeight: CGFloat) {
         catsCollectionView.collectionViewLayout.invalidateLayout()
         dogsCollectionView.collectionViewLayout.invalidateLayout()
+        catsCollectionView.verticalScrollIndicatorInsets = UIEdgeInsets(top: newHeight, left: 0, bottom: 0, right: 0)
+        dogsCollectionView.verticalScrollIndicatorInsets = UIEdgeInsets(top: newHeight, left: 0, bottom: 0, right: 0)
     }
     
 }
